@@ -1,0 +1,48 @@
+import processing.core.PApplet;
+
+public class MainClass extends PApplet {
+
+    int ball_one=0,ball_two=0,ball_three=0,ball_four=0;
+    public static final int Height=500;
+    public static final int Diameter=14;
+    public static void main(String[] args)
+    {
+        PApplet.main("MainClass" , args);
+    }
+
+    @Override
+    public void settings()
+    {
+        super.settings();
+        size(800,500);
+    }
+
+    @Override
+    public void setup()
+        {}
+
+    @Override
+    public void draw()
+    {
+        paintWhite();
+        drawCircle();
+    }
+
+    private void drawCircle()
+    {
+        ellipse(ball_one ,Height/5,Diameter,Diameter);
+        ball_one+=1;
+        ellipse(ball_two,Height*2/5,Diameter,Diameter);
+        ball_two+=2;
+        ellipse(ball_three ,Height*3/5,Diameter,Diameter);
+        ball_three+=3;
+        ellipse(ball_four,Height*4/5,Diameter,Diameter);
+        ball_four+=4;
+
+    }
+
+    private void paintWhite()
+    {
+//      background(255);
+    }
+}
